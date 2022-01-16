@@ -162,11 +162,20 @@ a.selected {
 
 h1 {
     margin-bottom: 0;
+    margin-left: 20px;
 }
 .titulo {
     margin-bottom: 15px;
 }
 
+.subtitulo {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.seccion {
+    margin-bottom: 20px;
+}
 
 .cards {
     width: 75%;
@@ -233,3 +242,15 @@ img {
 .resaltar {
     font-weight: bold;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: #cb997e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ddbea9;
+    border-radius: 6px;
+
+}
+
