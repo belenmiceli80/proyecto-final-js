@@ -125,7 +125,7 @@ a.selected {
     color: #a5a58d;
 }
 
-/* ESTO LO TENGO QUE HACER CON CADA PAGINA, PERO CAMBIANDO LA CLASS DE LUGAR!!!!!!!!!! */
+/* ESTO LO TENGO QUE HACER CON CADA PAGINA, PERO CAMBIANDO LA CLASS DE LUGAR */
 
 .selected:before {
     content: '';
@@ -237,10 +237,6 @@ img {
 .content a:hover {
     background-color: #ddbea9;
     transition: 0.2s ease;
-}
-
-.resaltar {
-    font-weight: bold;
 }
 
 ::-webkit-scrollbar {
