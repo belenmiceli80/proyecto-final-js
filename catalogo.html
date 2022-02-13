@@ -15,7 +15,7 @@
                 
     <script src="https://kit.fontawesome.com/e5769aaa57.js" crossorigin="anonymous"></script>
 
-    <title>Catálogo 📚📚 | BookRoom</title>
+    <title>📚BookRoom📚</title>
 </head>
 <body>
     <header>
@@ -23,277 +23,48 @@
             <i class="fas fa-book-reader"></i>
             <h2>BookRoom</h2>
         </div>
+        
+        <button id="boton-carrito"><i class="fa-solid fa-cart-shopping"></i>
+                <span id="contadorCarrito">0</span>
+        </button>
+
     </header>
 
-    <main>
-        
-        <section>
-            <div>
-                <h2>Buscador</h2>
-                <!-- ACA IRÍAN LAS DISTINTAS CATEGORIAS PARA FILTRAR LOS LIBROS CON JS Y UN BUSCADOR GENERAL-->
-            </div>
-        </section>
-        
-        <section>
-            <div class="cards">
-                <div class="card">
-                    <img src="public/img/standalone/academia_belladonna.png" alt="">
-                    <div class="content">
-                        <h2>Academia Belladonna</h2>
-                        <h4>Pablo De Santis</h4>
-                        <p>$1.940</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
+    <section>
+        <select id="selectCategorias">
+            <option value="all">Todos</option>
+            <option value="YA">Young Adult</option>
+            <option value="M">Misterio/Asesinos</option>
+            <option value="RM">Romance/Mafia</option>
+            <option value="YAD">Young Adult/Deporte</option>
+            <option value="YAM">Young Adult/Música</option>
+            <option value="YAF">Young Adult/Fantasía</option>
+            <option value="MR">Misterio/Romance</option>
+        </select>
+    </section>
+    <!-- buscador o solo opciones??? -->
 
-                <div class="card">
-                    <img src="public/img/standalone/beautiful_disaster.jpg" alt="">
-                    <div class="content">
-                        <h2>Beautiful Disaster</h2>
-                        <h4>Jamie McGuire</h4>
-                        <p>$2.898</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/standalone/fangirl.jpg" alt="">
-                    <div class="content">
-                        <h2>Fangirl</h2>
-                        <h4>Rainbow Rowell</h4>
-                        <p>$1.998</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/standalone/it_ends_with_us.jpg" alt="">
-                    <div class="content">
-                        <h2>It End with Us</h2>
-                        <h4>Colleen Hoover</h4>
-                        <p>$3.988</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/standalone/kingpin_an_italian_mafia_romance_duet.jpg" alt="">
-                    <div class="content">
-                        <h2>Kingpin</h2>
-                        <h4>W. S. Greer</h4>
-                        <p>$798</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/standalone/make_it_sweet.jpg" alt="">
-                    <div class="content">
-                        <h2>Make It Sweet</h2>
-                        <h4>Kristen Callihan</h4>
-                        <p>$2.590</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/standalone/our_overtime.jpg" alt="">
-                    <div class="content">
-                        <h2>Our Overtime</h2>
-                        <h4>S. C. Kate</h4>
-                        <p>$2.598</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/standalone/rhythm_chord_and_malykhin.jpg" alt="">
-                    <div class="content">
-                        <h2>Rhythm, Chord & Malykhin</h2>
-                        <h4>Mariana Zapata</h4>
-                        <p>$2.998</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/standalone/the_cheat_sheet.jpg" alt="">
-                    <div class="content">
-                        <h2>The Cheat Sheet</h2>
-                        <h4>Sarah Adams</h4>
-                        <p>$998</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/standalone/the_ex_hex.jpg" alt="">
-                    <div class="content">
-                        <h2>The Ex Hex</h2>
-                        <h4>Erin Sterling</h4>
-                        <p>$2.798</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/standalone/the_hating_game.jpg" alt="">
-                    <div class="content">
-                        <h2>The Hating Game</h2>
-                        <h4>Sally Thorne</h4>
-                        <p>$1.798</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/standalone/the_love_hypothesis.jpg" alt="">
-                    <div class="content">
-                        <h2>The Love Hypothesis</h2>
-                        <h4>Ali Hazelwood</h4>
-                        <p>$3.200</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/standalone/the_off_limits_rule.jpg" alt="">
-                    <div class="content">
-                        <h2>The Off Limits Rule</h2>
-                        <h4>Sarah Adams</h4>
-                        <p>$2.600</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/standalone/the_spanish_love_deception.jpg" alt="">
-                    <div class="content">
-                        <h2>The Spanish Love Deception</h2>
-                        <h4>Elena Armas</h4>
-                        <p>$3.000</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/standalone/the_sweetest_oblivion.jpg" alt="">
-                    <div class="content">
-                        <h2>The Sweetest Oblivion</h2>
-                        <h4>Danielle Lori</h4>
-                        <p>$3.600</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/standalone/the_unhoneymooners.jpg" alt="">
-                    <div class="content">
-                        <h2>The Unhoneymooners</h2>
-                        <h4>Christina Lauren</h4>
-                        <p>$2.898</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/standalone/the_upside_of_falling.jpg" alt="">
-                    <div class="content">
-                        <h2>The Upside of Falling</h2>
-                        <h4>Alex Light</h4>
-                        <p>$3.200</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/stalking-jack-the-ripper/stalkin_jack_the_ripper.jpg" alt="">
-                    <div class="content">
-                        <h2>Stalking Jack The Ripper</h2>
-                        <h4>Kerri Maniscalco</h4>
-                        <p>$2.198</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/stalking-jack-the-ripper/hunting_prince_dracula.jpg" alt="">
-                    <div class="content">
-                        <h2>Hunting Prince Dracula</h2>
-                        <h4>Kerri Maniscalco</h4>
-                        <p>$2.198</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/stalking-jack-the-ripper/escaping_from_houdini.jpg" alt="">
-                    <div class="content">
-                        <h2>Escaping from Houdini</h2>
-                        <h4>Kerri Maniscalco</h4>
-                        <p>$2.198</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/stalking-jack-the-ripper/capturing_the_devil.jpg" alt="">
-                    <div class="content">
-                        <h2>Capturing the Devil</h2>
-                        <h4>Kerri Maniscalco</h4>
-                        <p>$2.198</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/dirty-air/1_throttled.jpg" alt="">
-                    <div class="content">
-                        <h2>Throttled</h2>
-                        <h4>Lauren Asher</h4>
-                        <p>$3.000</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/dirty-air/2_collided.jpg" alt="">
-                    <div class="content">
-                        <h2>Collided</h2>
-                        <h4>Lauren Asher</h4>
-                        <p>$3.000</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/dirty-air/3_wrecked.jpg" alt="">
-                    <div class="content">
-                        <h2>Wrecked</h2>
-                        <h4>Lauren Asher</h4>
-                        <p>$3.000</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="public/img/dirty-air/4_redeemed.jpg" alt="">
-                    <div class="content">
-                        <h2>Redeemed</h2>
-                        <h4>Lauren Asher</h4>
-                        <p>$3.000</p>
-                        <a href="" class="button"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
+    <main id="contenedor-productos">
+    
     </main>
 
+    <!-- MODIFICAR ESTETICA -->
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="contenedorCarrito">
+                
+            </div>
+        </div>
+        <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
+    </div>
+    <!-- MODIFICAR ESTETICA -->
 
 
-    <script src="js/main.js"></script>
+    <script src="catalogo.js"></script>
+    <script src="modal.js"></script>
+    <script src="main.js"></script>
 
 
 </body>
