@@ -20,28 +20,32 @@
 <body>
     <header>
         <div class="name-page">
-            <i class="fas fa-book-reader"></i>
-            <h2>BookRoom</h2>
+            <h1>BookRoom</h1>
         </div>
         
-        <button id="boton-carrito"><i class="fa-solid fa-cart-shopping"></i>
+        <button id="boton-carrito" class="btn-carrito"><i class="fas fa-shopping-cart"></i>
                 <span id="contadorCarrito">0</span>
         </button>
 
     </header>
 
     <section>
-        <select id="selectCategorias">
-            <option value="all">Todos</option>
-            <option value="YA">Young Adult</option>
-            <option value="M">Misterio/Asesinos</option>
-            <option value="RM">Romance/Mafia</option>
-            <option value="YAD">Young Adult/Deporte</option>
-            <option value="YAM">Young Adult/Música</option>
-            <option value="YAF">Young Adult/Fantasía</option>
-            <option value="MR">Misterio/Romance</option>
-        </select>
+        <div class="categorias">
+            <h2>Categorías</h2>
+            <select id="selectCategorias">
+                <option value="all">Todos</option>
+                <option value="YA">Young Adult</option>
+                <option value="M">Misterio/Asesinos</option>
+                <option value="RM">Romance/Mafia</option>
+                <option value="YAD">Young Adult/Deporte</option>
+                <option value="YAM">Young Adult/Música</option>
+                <option value="YAF">Young Adult/Fantasía</option>
+                <option value="MR">Misterio/Romance</option>
+            </select>
+        </div>    
+            
     </section>
+    
     <!-- buscador o solo opciones??? -->
 
     <main id="contenedor-productos">
@@ -56,15 +60,16 @@
             <div id="contenedorCarrito">
                 
             </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
         </div>
-        <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
+        
     </div>
     <!-- MODIFICAR ESTETICA -->
 
 
     <script src="catalogo.js"></script>
-    <script src="modal.js"></script>
-    <script src="main.js"></script>
+    <script src="modal.js"></script>    
+    <script src="app.js"></script>
 
 
 </body>

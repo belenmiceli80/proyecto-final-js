@@ -12,7 +12,6 @@ a {
 body {
     background-color: #cb997e;
     margin-top: 80px;
-    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 main {
@@ -55,16 +54,10 @@ header {
     margin-top: 10px;
 }
 
-.name-page i {
-    width: 20px;
-    margin-right: 20px;
-}
-
-
-h1 {
+.name-page h1 {
     margin-bottom: 0;
-    margin-left: 20px;
 }
+
 .titulo {
     margin-bottom: 15px;
 }
@@ -78,9 +71,6 @@ h1 {
 .producto {
     width: 75%;
     margin: auto;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 30px; */
 }
 
 .card {
@@ -148,16 +138,122 @@ h1 {
 
 }
 
-button {
-    background: none;
-    width: 50px;
-    height: 25px;
-    border-color: none;
-    color: black;
+.btn-carrito {
+    background-color: #6b705c;
+    box-shadow: none;
+    width: 80px;
+    height: 50px;
+    color: #ffe8d6;
+    border-radius: 15px;
 }
 
-button i {
+.btn-carrito i {
     width: 20px;
     margin-right: 20px;
-    color: black;
 }
+
+.modal-contenedor {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 5;
+}
+
+.modal-carrito {
+    position: relative;
+    background-color: #ffe8d6;
+    width: 1000px;
+    padding: 20px;
+    margin-top: -100%;
+    transition: all .5s;
+}
+
+.modal-active .modal-carrito {
+    margin-top: 0;
+}
+
+.modal-carrito h3 {
+    color: #6b705c;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+
+.modal-carrito #carritoCerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: #cb997e;
+    border: none;
+    background-color: #ffe8d6;
+}
+.modal-carrito #carritoCerrar:hover {
+    cursor: pointer;
+}
+.modal-carrito #carritoCerrar:focus {
+    outline: none;
+}
+.modal-carrito .precioProducto {
+    padding: 10px 0px 0px;
+}
+
+.productoEnCarrito {
+    border-left: 5px solid #a5a58d;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.productoEnCarrito:hover {
+    border-left: 5px solid #6b705c;
+}
+
+.boton-eliminar {
+    background-color: #ffe8d6;
+    color: #6b705c;
+    border: none;
+    font-size: 20px;
+}
+
+.boton-eliminar:hover {
+    cursor: pointer;
+}
+.boton-eliminar:focus {
+    outline: none;
+}
+
+.categorias {
+    margin-left: 25px;
+}
+
+.categorias h2 {
+    margin-bottom: 5px;
+}
+
+.categorias select {
+    background-color: #ddbea9;
+    width: 450px;
+    height: 50px;
+    font-size: 20px;
+    color: #6b705c;
+    box-shadow: none;
+    border: none;
+    border-radius: 10px;
+}
+
