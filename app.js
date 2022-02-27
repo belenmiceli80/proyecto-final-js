@@ -1,9 +1,10 @@
 let carritoDeCompras = [];
+let carritoStorage = [];
 
-document.addEventListener("DOMContentLoaded", (e) => {
+document.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem("carrito")) {
         carritoDeCompras = JSON.parse(localStorage.getItem("carrito"))
-        actualizarCarrito(carritoDeCompras);
+        actualizarCarrito(carritoStorage);
     }
 })
 
@@ -19,7 +20,39 @@ const selectCategorias = document.getElementById('selectCategorias')
 mostrarProductos(stockProductos)
 
 function mostrarProductos(array){
-    contenedorProductos.innerHTML = "";
+
+    if (localStorage.getItem("carrito")) {
+        carritoStorage = JSON.parse(localStorage.getItem("carrito"))
+        carritoStorage.map((producto) => {
+            let div = document.createElement('div');
+            div.classList.add('productoEnCarrito');
+            div.innerHTML= `<p>${producto.nombre}</p>
+                            <p>Precio: $${producto.precio}</p>
+                            <p id=cantidad${producto.id}>Cantidad: ${producto.cantidad}</p>
+                            <button id=eliminar${producto.id} class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>`;
+            contenedorCarrito.appendChild(div);
+
+            actualizarCarrito(carritoStorage);
+
+            let botonEliminar = document.getElementById(`eliminar${producto.id}`)
+        
+            botonEliminar.addEventListener('click', ()=>{
+        
+                Toastify({
+                    text: "Eliminado del carrito",
+                    duration: 1000,
+                    style: {
+                        background: '#6b705c',
+                        color: '#ffe8d6'
+                    }
+                }).showToast();
+
+                botonEliminar.parentElement.remove()
+                carritoStorage = carritoStorage.filter(el => el.id != producto.id);
+                actualizarCarrito(carritoStorage);
+                })
+        })
+    }
     
     array.forEach(producto => {
         let div = document.createElement('div')
@@ -42,6 +75,16 @@ function mostrarProductos(array){
         let btnAgregar = document.getElementById(`botonAgregar${producto.id}`)
 
         btnAgregar.addEventListener('click', () => {
+            
+            Toastify({
+                text: "Agregado al carrito",
+                duration: 1000,
+                style: {
+                    background: '#6b705c',
+                    color: '#ffe8d6'
+                }
+            }).showToast();
+
             agregarAlCarrito(producto.id)
         })
 
@@ -74,6 +117,16 @@ function agregarAlCarrito(id) {
     actualizarCarrito()
     let botonEliminar = document.getElementById(`eliminar${productoAgregar.id}`)
     botonEliminar.addEventListener('click', ()=>{
+        
+        Toastify({
+            text: "Eliminado del carrito",
+            duration: 1000,
+            style: {
+                background: '#6b705c',
+                color: '#ffe8d6'
+            }
+        }).showToast();
+
         botonEliminar.parentElement.remove()
         carritoDeCompras = carritoDeCompras.filter(el => el.id != productoAgregar.id);
         actualizarCarrito();
